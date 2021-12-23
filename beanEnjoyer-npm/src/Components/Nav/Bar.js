@@ -56,6 +56,15 @@ const Bar = (props) => {
               style={{ color: "white" }}
               className="text-decoration-none">
               <button className="btn btn-secondary m-2">
+                Home
+              </button>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/center/"}
+              style={{ color: "white" }}
+              className="text-decoration-none">
+              <button className="btn btn-secondary m-2">
                 Centrai
               </button>
             </Link>

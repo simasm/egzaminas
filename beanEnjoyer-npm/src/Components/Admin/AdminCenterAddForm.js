@@ -6,8 +6,8 @@ import AdminContext from "./AdminView";
 
 const AdminCenterAddForm = () => {
 
-    const [state, setState] = useState({  });
-    const { loadCenters } = useContext(AdminContext);
+   const [state, setState] = useState({  });
+  //  const { loadCenters } = useContext(AdminContext);
 
     const submitHandle = (e) => {
 
@@ -23,16 +23,16 @@ const AdminCenterAddForm = () => {
 
         switch (e.target.name) {
             case "title": setState({ ...state, title: e.target.value }); break;
-            case "price": setState({ ...state, price: e.target.value }); break;
-            case "quantity": setState({ ...state, quantity: e.target.value }); break;
-            default: break;
+            case "queue": setState({ ...state, queue: e.target.value }); break;
+            case "description": setState({ ...state, description: e.target.value }); break;
+            case "vacs": setState({ ...state, vacs: e.target.value }); break;            default: break;
         }
     }
 
     const validateForm = () => {
 
-        return ((state.price.match(/^([0-9]+\.?[0-9]*|\.[0-9]+)$/) &&
-            state.quantity.match(/^[0-9]+$/)) !== null);
+     //   return ((state.price.match(/^([0-9]+\.?[0-9]*|\.[0-9]+)$/) &&
+       //     state.quantity.match(/^[0-9]+$/)) !== null);
     }
 
     const uploadCenter = async () => {
@@ -52,12 +52,12 @@ const AdminCenterAddForm = () => {
         <form onSubmit={submitHandle} >
 
             <div className="row bg-dark" style={{ color: "white" }}>
-                <h4>Add product </h4>
+                <h4>Pridėti centrą </h4>
             </div>
             <div className="row pt-2">
                 <div className="col-5-lg">
 
-                    <span className="m-2">Title</span>
+                    <span className="m-2">Pavadinimas</span>
                     <input className="col-5-lg" type="text"
                         name="title"
                         placeholder="title"
@@ -67,25 +67,36 @@ const AdminCenterAddForm = () => {
             </div>
             <div className="row pt-2">
                 <div className="col">
-                    <span className="m-2">Price</span>
+                    <span className="m-2">Eilės tipas</span>
                     <input className="col" type="text"
-                        name="price"
-                        placeholder="price"
+                        name="queue"
+                        placeholder="queue"
                         onChange={handleChange} />
 
                 </div>
             </div>
             <div className="row pt-2">
                 <div className="col">
-                    <span className="m-2">Quantity</span>
+                    <span className="m-2">Aprašymas</span>
                     <input className="col" type="text"
-                        name="quantity"
-                        placeholder="quantity"
+                        name="description"
+                        placeholder="description"
                         onChange={handleChange} />
 
                 </div>
             </div>
 
+            <div className="row pt-2">
+                <div className="col">
+                    <span className="m-2">priskitrit dropdown vac part</span>
+                    <input className="col" type="text"
+                        name="vacs"
+                        placeholder="vacs"
+                        onChange={handleChange} />
+
+                </div>
+            </div>
+   
             <input type="submit"
                 value="Submit" />
 

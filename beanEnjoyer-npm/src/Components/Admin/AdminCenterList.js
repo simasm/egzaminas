@@ -9,7 +9,7 @@ const AdminCenterList = () => {
     const deleteProduct = async (id) => {
 
         try {
-            const response = await axios.delete(process.env.PUBLIC_URL + "/api/products/".concat(id));
+            const response = await axios.delete(process.env.PUBLIC_URL + "/api/centers/".concat(id));
             if (response.status < 400) {
                 loadProducts();
             }
