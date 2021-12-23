@@ -11,17 +11,17 @@ export const AdminContext = React.createContext(
 
 const AdminView = () => {
 
-    const [productList, setProductList] = useState({ products_array: null });
+    const [centerList, setCenterList] = useState({ center_array: null });
 
     // console.log("pub url "+ process.env.PUBLIC_URL);
 
 
-    const loadProducts = async () => {
+    const loadCenters = async () => {
 
         try {
-            const response = await axios.get(process.env.PUBLIC_URL + "/api/products");
-            const products = response.data;
-            setProductList({ products_array: products });
+            const response = await axios.get(process.env.PUBLIC_URL + "/api/centers");
+            const centers = response.data;
+            setCenterList({ center_array: centers });
         }
         catch (err) {
             console.log(err);
@@ -31,13 +31,13 @@ const AdminView = () => {
 
     useEffect(() => {
 
-        loadProducts();
+        loadCenters();
 
     }, []);
 
 
     return (
-        <AdminContext.Provider value={{ productList: productList, setProductList, loadProducts }}>
+        <AdminContext.Provider value={{ centerList: centerList, setCenterList, loadCenters }}>
             <div className="container pt-2 ">
                 <div className="row justify-content-evenly  ">
                     <div className="col-7  ">

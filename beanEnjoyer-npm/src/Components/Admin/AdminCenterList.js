@@ -4,14 +4,14 @@ import { AdminContext } from './AdminView';
 
 const AdminCenterList = () => {
 
-    const { productList, loadProducts } = useContext(AdminContext);
+    const { centerList, loadCenters } = useContext(AdminContext);
 
-    const deleteProduct = async (id) => {
+    const deleteCenter = async (id) => {
 
         try {
             const response = await axios.delete(process.env.PUBLIC_URL + "/api/centers/".concat(id));
             if (response.status < 400) {
-                loadProducts();
+                loadCenters();
             }
         } catch (err) {
             console.log(err);
@@ -19,7 +19,7 @@ const AdminCenterList = () => {
     }
 
 
-    if (productList.products_array !== null)
+    if (centerList.center_array !== null)
         return (
 
             <ol className="conainer   ">
@@ -30,18 +30,14 @@ const AdminCenterList = () => {
                     <div className="col border ">quantity</div>
                     <div className="col border">action</div>
                 </li>
-                {productList.products_array.map(product =>
-                    <li className="row justify-content-evenly bg-light" key={product.id}>
+                {centerList.center_array.map(center =>
+                    <li className="row justify-content-evenly bg-light" key={center.id}>
                         <div className="col m-2 ">
-                            {product.id} </div>
+                            {center.id} </div>
                         <div className="col m-2">
-                            {product.title}    </div>
-                        <div className="col m-2">
-                            {product.price}   </div>
-                        <div className="col m-2">
-                            {product.quantity}   </div>
+                            {center.title}    </div>
                         <div className="col btn m-2 btn-secondary btn-sm"
-                            onClick={() => deleteProduct(product.id)}>Delete</div>
+                            onClick={() => deleteCenter(center.id)}>Delete</div>
                     </li>)}
             </ol>
 

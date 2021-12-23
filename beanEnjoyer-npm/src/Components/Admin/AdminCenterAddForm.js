@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import axios from "axios";
 
-import AdminContext from "./AdminView";
+import { AdminContext } from "./AdminView";
 
 const AdminCenterAddForm = () => {
 
    const [state, setState] = useState({  });
-  //  const { loadCenters } = useContext(AdminContext);
+    const { loadCenters } = useContext(AdminContext);
 
     const submitHandle = (e) => {
 
@@ -33,15 +33,16 @@ const AdminCenterAddForm = () => {
 
      //   return ((state.price.match(/^([0-9]+\.?[0-9]*|\.[0-9]+)$/) &&
        //     state.quantity.match(/^[0-9]+$/)) !== null);
+       return false;
     }
 
     const uploadCenter = async () => {
 
         try {
-         //   const response = await axios.post(process.env.PUBLIC_URL + "/api/centers", state);
-         //   if (response.status < 400) {
-         //       loadCenters();
-          //  }
+           const response = await axios.post(process.env.PUBLIC_URL + "/api/centers", state);
+            if (response.status < 400) {
+             // loadCenters();
+            }
 
         } catch (err) {
             console.log(err);

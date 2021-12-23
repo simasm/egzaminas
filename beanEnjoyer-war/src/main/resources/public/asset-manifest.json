@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/beanEnjoyer-war/static/css/main.e7512b03.chunk.css",
+    "main.js": "/beanEnjoyer-war/static/js/main.382cfd3d.chunk.js",
+    "main.js.map": "/beanEnjoyer-war/static/js/main.382cfd3d.chunk.js.map",
+    "runtime-main.js": "/beanEnjoyer-war/static/js/runtime-main.9c6d568d.js",
+    "runtime-main.js.map": "/beanEnjoyer-war/static/js/runtime-main.9c6d568d.js.map",
+    "static/css/2.171a7357.chunk.css": "/beanEnjoyer-war/static/css/2.171a7357.chunk.css",
+    "static/js/2.d8284e6b.chunk.js": "/beanEnjoyer-war/static/js/2.d8284e6b.chunk.js",
+    "static/js/2.d8284e6b.chunk.js.map": "/beanEnjoyer-war/static/js/2.d8284e6b.chunk.js.map",
+    "static/js/3.f2eddc48.chunk.js": "/beanEnjoyer-war/static/js/3.f2eddc48.chunk.js",
+    "static/js/3.f2eddc48.chunk.js.map": "/beanEnjoyer-war/static/js/3.f2eddc48.chunk.js.map",
+    "index.html": "/beanEnjoyer-war/index.html",
+    "precache-manifest.e6fb753407db1ba4db8708e38f1e51f0.js": "/beanEnjoyer-war/precache-manifest.e6fb753407db1ba4db8708e38f1e51f0.js",
+    "service-worker.js": "/beanEnjoyer-war/service-worker.js",
+    "static/css/2.171a7357.chunk.css.map": "/beanEnjoyer-war/static/css/2.171a7357.chunk.css.map",
+    "static/css/main.e7512b03.chunk.css.map": "/beanEnjoyer-war/static/css/main.e7512b03.chunk.css.map",
+    "static/js/2.d8284e6b.chunk.js.LICENSE.txt": "/beanEnjoyer-war/static/js/2.d8284e6b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9c6d568d.js",
+    "static/css/2.171a7357.chunk.css",
+    "static/js/2.d8284e6b.chunk.js",
+    "static/css/main.e7512b03.chunk.css",
+    "static/js/main.382cfd3d.chunk.js"
+  ]
+}
